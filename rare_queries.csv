@@ -1,0 +1,117 @@
+"INDEX_NAME","SQL_ID","MODULE","FIRST_SEEN","LAST_SEEN","EXECUTIONS","SQL_TEXT"
+"GL_JE_LINES_A1","csyndsh4dhura","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 11.00.09.317000000 PM,17-OCT-26 10.00.39.831000000 PM,9,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_A1"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx"
+"GL_JE_LINES_A1","1sbhvndqfphs6","e:SYSADMIN:cp:fnd/FNDGSCST",22-JUL-26 06.00.13.673000000 AM,07-SEP-26 02.00.25.239000000 PM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_A1"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_"
+"GL_JE_LINES_BRK1","5z0yhn7hbcv57","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 08.00.56.645000000 PM,17-OCT-26 08.00.34.108000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_BRK1"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_i"
+"GL_JE_LINES_BRK1","9z6jbg9pdkgj6","e:SYSADMIN:cp:fnd/FNDGSCST",20-JUL-26 06.00.57.811000000 PM,07-SEP-26 06.00.02.415000000 AM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_BRK1"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_id"
+"GL_JE_LINES_D1","actq37garnvpc","JarLauncher",19-JUL-26 10.00.40.530000000 PM,21-OCT-26 12.30.48.306000000 PM,109,"
+            SELECT
+                headers.currency_code as currency,
+                coalesce(
+                    sum(
+                        (case
+                            when
+               "
+"GL_JE_LINES_D1","8bt2d0xddtss3","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 08.00.56.645000000 PM,17-OCT-26 08.00.34.109000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_D1"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx"
+"GL_JE_LINES_D1","3q73qpvdyg9mh","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"SELECT TO_CHAR(l.EFFECTIVE_DATE,'YYYY-MM-DD') eff, TO_CHAR(TRUNC(l.CREATION_DATE),'YYYY-MM-DD') created, COUNT(*) n, COUNT(DISTINCT l.JE_HEADER_ID) hdrs, SUM(CASE WHEN l.REFERENCE_2 IS NOT NULL THEN 1"
+"GL_JE_LINES_D1","91n50m199qb9x","JarLauncher",09-OCT-26 05.00.52.128000000 PM,09-OCT-26 06.00.04.760000000 PM,2,"WITH filtered_gl_rows AS (
+    SELECT /*+ MATERIALIZE */
+        gh.CURRENCY_CODE,
+        gl.ENTERED_DR,
+        gl.ENTERED_CR,
+        gl.CREATION_DATE,
+        gcc.SEGMENT4,
+        gcc.SEGMENT5,
+ "
+"GL_JE_LINES_D1","0r19wmpy41uuv","e:SYSADMIN:cp:fnd/FNDGSCST",21-JUL-26 12.30.18.543000000 AM,07-SEP-26 08.00.07.919000000 AM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""GL_JE_LINES_D1"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_"
+"GL_JE_LINES_D1","arb1u8vz4k6p7","SQL Developer",01-SEP-26 10.30.40.964000000 AM,01-SEP-26 11.00.44.075000000 AM,1,"SELECT
+       h.je_header_id, h.period_name, h.external_reference, h.name, h.currency_code
+FROM   apps.XXGLARC_GL_JE_HEADERS h
+JOIN   apps.XXGLARC_GL_JE_BATCHES b
+       ON b.je_batch_id = h.je_batch_"
+"GL_JE_LINES_D1","0tjnwxtpzfbmj","SQL Developer",31-AUG-26 08.00.45.138000000 PM,31-AUG-26 08.30.46.660000000 PM,1,"SELECT h.je_header_id, h.period_name, h.external_reference, h.name, h.currency_code
+FROM   apps.gl_code_combinations c
+JOIN   apps.XXGLARC_GL_JE_LINES l
+    ON c.code_combination_id = l.code_combinati"
+"GL_JE_LINES_D1","c4km4b3s1g148","SQL Developer",27-AUG-26 12.00.38.400000000 PM,27-AUG-26 02.00.46.683000000 PM,4,"SELECT
+       h.je_header_id, h.period_name, h.external_reference, h.name, h.currency_code
+FROM   apps.XXGLARC_GL_JE_HEADERS h
+JOIN   apps.XXGLARC_GL_JE_BATCHES b
+       ON b.je_batch_id = h.je_batch_"
+"IDX$$_441E0002","7srhbxwnwmrjv","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 10.00.05.171000000 PM,17-OCT-26 09.00.36.857000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_441E0002"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx"
+"IDX$$_441E0002","8cv1b5pfnv0wp","e:SYSADMIN:cp:fnd/FNDGSCST",21-JUL-26 08.00.38.718000000 PM,07-SEP-26 11.00.16.175000000 AM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_441E0002"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_"
+"IDX$$_A4E30001","26h2waq14bt1h","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 10.00.05.171000000 PM,17-OCT-26 09.00.36.857000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_A4E30001"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx"
+"IDX$$_A4E30001","g8urvt5kjw45j","/Users/mark.nenadov/.cache/uv/archive-v0/NrCB4S0",10-SEP-26 08.00.30.571000000 AM,10-SEP-26 09.00.33.622000000 AM,2,"SELECT MIN(effective_date) AS archive_min_eff FROM apps.xxglarc_gl_je_lines WHERE ledger_id = 1"
+"IDX$$_A4E30001","1a17jgnujdvb9","e:SYSADMIN:cp:fnd/FNDGSCST",21-JUL-26 10.30.46.404000000 PM,07-SEP-26 12.00.19.428000000 PM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_A4E30001"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_"
+"IDX$$_A4E30001","d8pr2xfx088kp","SQL Developer",07-AUG-26 03.00.06.286000000 PM,07-AUG-26 04.00.10.736000000 PM,10,"SELECT
+      b.je_batch_id,
+      b.name                AS batch_name,
+      h.external_reference,
+      h.period_name,
+      MIN(h.je_header_id)   AS sample_je_header_id,
+      MIN(l.attribute5)     "
+"IDX$$_C1440001","0rat0px7g6fhy","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 07.00.52.323000000 PM,17-OCT-26 07.00.31.396000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_C1440001"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx"
+"IDX$$_C1440001","5m140p78ft1t8","e:SYSADMIN:cp:fnd/FNDGSCST",20-JUL-26 10.30.26.977000000 AM,07-SEP-26 04.00.57.073000000 AM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""IDX$$_C1440001"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_"
+"TEMP","1cnphtpyrzd6r","e:SYSADMIN:cp:fnd/FNDGSCST",19-SEP-26 09.00.00.883000000 PM,17-OCT-26 09.00.36.855000000 PM,10,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""TEMP"",10)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_p"
+"TEMP","ggpbzu77sg19h","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",16-OCT-26 04.00.59.817000000 PM,16-OCT-26 05.00.04.631000000 PM,2,"SELECT l.ATTRIBUTE3, l.ATTRIBUTE5, h.JE_SOURCE, h.JE_CATEGORY, COUNT(*) n, MAX(l.CREATION_DATE) latest, SUM(CASE WHEN l.REFERENCE_2 IS NOT NULL THEN 1 ELSE 0 END) ref2, SUM(CASE WHEN l.REFERENCE_3 IS "
+"TEMP","83fp925y6fqzm","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"SELECT TO_CHAR(TRUNC(l.CREATION_DATE),'MM-DD') created, h.JE_SOURCE src, h.JE_CATEGORY cat, COUNT(*) n, COUNT(DISTINCT l.JE_HEADER_ID) hdrs, SUM(CASE WHEN l.REFERENCE_2 IS NULL THEN 1 ELSE 0 END) r2_n"
+"TEMP","71zfuy402bb03","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"WITH p AS (SELECT l.REFERENCE_2 r2, SUM(CASE WHEN l.REFERENCE_3 IS NULL THEN 1 ELSE 0 END) r3_null, SUM(CASE WHEN l.REFERENCE_3 IS NOT NULL THEN 1 ELSE 0 END) r3_set, SUM(CASE WHEN l.REFERENCE_3 IS NU"
+"TEMP","9khqxstk4z3dc","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"WITH p AS (SELECT l.REFERENCE_2 r2, MIN(h.EXTERNAL_REFERENCE) ext, COUNT(*) n, COUNT(DISTINCT l.REFERENCE_1) n_hdr, MIN(TO_CHAR(l.CREATION_DATE,'MM-DD HH24:MI')) t, MIN(SUBSTR(l.DESCRIPTION,1,50)) d F"
+"TEMP","a4wcngygh0ymn","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.30.53.164000000 AM,15-OCT-26 09.00.55.249000000 AM,1,"SELECT TO_CHAR(l.CREATION_DATE,'MM-DD HH24:MI') created, h.JE_SOURCE src, h.JE_CATEGORY cat, h.JE_HEADER_ID, SUBSTR(h.EXTERNAL_REFERENCE,1,60) ext_ref, l.JE_LINE_NUM ln, l.REFERENCE_1 r1, l.REFERENCE_"
+"TEMP","a6p0hxwwbqvb1","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"SELECT h.JE_HEADER_ID, h.JE_CATEGORY cat, SUBSTR(h.NAME,1,60) hname, h.EXTERNAL_REFERENCE ext, TO_CHAR(MIN(l.CREATION_DATE),'MM-DD HH24:MI') created, COUNT(*) n, MIN(l.REFERENCE_3) r3min, MAX(l.REFERE"
+"TEMP","dutsvahwtdw07","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.30.53.164000000 AM,15-OCT-26 09.00.55.249000000 AM,1,"SELECT h.JE_SOURCE src, TO_CHAR(TRUNC(l.CREATION_DATE),'MM-DD') d, CASE WHEN l.REFERENCE_7 IS NULL THEN 'R7_NULL' ELSE 'R7_SET' END r7, CASE WHEN l.REFERENCE_2 IS NULL THEN 'R2_NULL' ELSE 'R2_SET' END"
+"TEMP","arq0ayp4gvpgm","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"SELECT TO_CHAR(TRUNC(l.CREATION_DATE),'MM-DD') d, h.JE_CATEGORY cat, CASE WHEN l.REFERENCE_2 IS NULL THEN 'NULL' WHEN l.REFERENCE_2 LIKE '39%' THEN '39x(posting)' WHEN l.REFERENCE_2 LIKE '105%' THEN '"
+"TEMP","8asztksyxp9un","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"WITH p AS (SELECT l.REFERENCE_2 r2, COUNT(DISTINCT h.EXTERNAL_REFERENCE) n_ext, COUNT(DISTINCT l.ATTRIBUTE6) n_a6, COUNT(*) n, MIN(SUBSTR(l.DESCRIPTION,1,30)) d, MIN(h.EXTERNAL_REFERENCE) ext, MIN(TO_"
+"TEMP","fksy8ftx5h1r3","/Users/mark.nenadov/.cache/uv/archive-v0/w3t9yXB",15-OCT-26 08.00.51.033000000 AM,15-OCT-26 09.00.55.249000000 AM,2,"SELECT TO_CHAR(l.CREATION_DATE,'MM-DD HH24') hr, COUNT(*) n, COUNT(DISTINCT l.JE_HEADER_ID) hdrs, SUM(CASE WHEN l.REFERENCE_2 IS NULL THEN 1 ELSE 0 END) r2_null, SUM(CASE WHEN l.REFERENCE_3 IS NULL TH"
+"TEMP","fpf2c0gh3rjmw","TOAD 26.2.272.9090",16-SEP-26 08.00.44.020000000 AM,16-SEP-26 08.30.45.934000000 AM,1,"SELECT TO_CHAR(l.creation_date, 'YYYY-MM') AS month,
+       COUNT(*)                             AS rows_inserted
+FROM   gl.gl_je_lines l
+WHERE  l.creation_date >= ADD_MONTHS(SYSDATE, -6)
+GROUP  BY TO"
+"TEMP","fqfyw718f71vw","e:SYSADMIN:cp:fnd/FNDGSCST",21-JUL-26 08.00.51.761000000 AM,07-SEP-26 09.00.10.572000000 AM,15,"select /*+ opt_param('_optimizer_use_auto_indexes' 'on')   parallel_index(t, ""TEMP"",4)  dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_pa"
+"TEMP","342byxw8t4430","TOAD 16.2.98.1741",29-JUL-26 07.00.37.124000000 AM,29-JUL-26 10.00.49.222000000 AM,3,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","gu5fz5fgku5m1","TOAD 16.2.98.1741",29-JUL-26 08.00.39.811000000 AM,29-JUL-26 09.00.42.960000000 AM,2,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","6fpfhyvrp9j3c","TOAD 16.2.98.1741",29-JUL-26 08.00.39.811000000 AM,29-JUL-26 09.00.42.960000000 AM,0,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","dahzaju8khpd6","TOAD 16.2.98.1741",29-JUL-26 08.00.39.811000000 AM,29-JUL-26 09.00.42.960000000 AM,2,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","gk4hg2rnaz60k","TOAD 16.2.98.1741",29-JUL-26 08.00.39.811000000 AM,29-JUL-26 09.00.42.960000000 AM,2,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","b7nnk0f43smr3","TOAD background query session",29-JUL-26 08.00.39.812000000 AM,29-JUL-26 08.30.41.383000000 AM,0,"INSERT INTO XXWS_DBA.ST_GL_INTERFACE_STG (                                          -- Control
+                          STATUS,
+                          LEDGER_ID,
+                          SET_OF_B"
+"TEMP","8u6wn3mg47d75","TOAD 16.2.98.1741",27-JUL-26 10.00.36.898000000 AM,27-JUL-26 12.00.44.263000000 PM,2,"Select trunc(creation_date),count(1) From Gl.GL_JE_LINES Where creation_date > to_date ('20-JUL-2026 00:00:00','DD-MON-YYYY HH24:MI:SS')  group by  trunc(creation_date)"
+"TEMP","2t65a3nyfp93t","TOAD background query session",24-JUL-26 03.00.45.363000000 PM,24-JUL-26 04.30.50.962000000 PM,1,"INSERT INTO XXWS_DBA.GL_INTERFACE (
+    status, ledger_id, accounting_date, currency_code,
+    date_created, created_by, actual_flag,
+    user_je_category_name, user_je_source_name,
+    code_combinati"
+"TEMP","364cku9syzanr","TOAD 16.2.98.1741",24-JUL-26 11.00.29.625000000 AM,24-JUL-26 01.00.38.039000000 PM,2,"WITH
+        batch_import
+        AS
+            (          -- batch -> import request id (trailing number in name)
+             SELECT b.je_batch_id,
+                    b.name                       "
+"TEMP","1mxdpjpvkz4a8","TOAD 16.2.98.1741",24-JUL-26 10.00.25.816000000 AM,24-JUL-26 12.00.34.674000000 PM,2,"WITH batch_import AS (           -- batch -> import request id (trailing number in name)
+    SELECT b.je_batch_id,
+           b.name                                      AS gl_batch_name,
+           T"
+"TEMP","gqsx23nytf7jf","TOAD 16.2.98.1741",24-JUL-26 09.00.21.100000000 AM,24-JUL-26 10.00.25.820000000 AM,2,"WITH batch_import AS (           -- batch -> import request id, filtered by batch date window
+    SELECT b.je_batch_id,
+           b.name                                              AS gl_batch_name,"
+"TEMP","2u6n25383y7kb","TOAD 16.2.98.1741",24-JUL-26 09.00.21.102000000 AM,24-JUL-26 09.30.22.529000000 AM,0,"CREATE TABLE XXWS_DBA.ST_REQUESTS_SAMPLE AS  
+WITH batch_import AS (           -- batch -> import request id, filtered by batch date window
+    SELECT b.je_batch_id,
+           b.name                 "
